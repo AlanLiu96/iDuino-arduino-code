@@ -436,20 +436,21 @@ void updateSensors(){
  }
     switch (ServoPins[10]) {
           case 1:
-            myServo10.write(45);
+            myServo10.write(0);
             break;
           case 2:
-            myServo10.write(135);
+            myServo10.write(180);
             break;
-            myServo11.write(90);// if its anything else ignore it
+          default:
+            myServo10.write(90);// if its anything else ignore it
       }
 
     switch (ServoPins[11]) {
           case 1:
-            myServo10.write(45);
+            myServo11.write(30);
             break;
           case 2:
-            myServo10.write(135);
+            myServo11.write(150);
             break;
           default:
             myServo11.write(90);//go to left all the way even if no command is given!  
